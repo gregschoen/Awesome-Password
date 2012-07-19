@@ -25,7 +25,7 @@ class AwesomePassword
 	static function uuid()
 	{
 		// http://www.php.net/manual/en/function.uniqid.php#94959
-		return sprintf( '%04x%04x%04x%04x%04x%04x%04x%04x',
+		return sprintf("%04x%04x%04x%04x%04x%04x%04x%04x",
 			mt_rand(0, 0xffff), mt_rand(0, 0xffff),
 			mt_rand(0, 0xffff),
 			mt_rand(0, 0x0fff) | 0x4000,
@@ -45,14 +45,14 @@ class AwesomePassword
 	}
 }
 
-// echo AwesomePassword::hash("password") . "\n";
+// $password = "password";
+// $hash = AwesomePassword::hash($password);
 
-$hash = "ODdmNDAyYTAzOWU2$/x7uWSqyRZSPKvDEkRqO/Fc/z8ihnxeeMLhHpnxAwY6MEXMcsP11fu3.Dtm/UIYuJyi8fYvTzMVtwEvyvSJzF/";
-$password = "password";
+// "ODdmNDAyYTAzOWU2$/x7uWSqyRZSPKvDEkRqO/Fc/z8ihnxeeMLhHpnxAwY6MEXMcsP11fu3.Dtm/UIYuJyi8fYvTzMVtwEvyvSJzF/";
 
-$check = AwesomePassword::check($password,$hash);
+// $check = AwesomePassword::check($password,$hash);
 
-if($check)
-{
-	echo "Hash validated\n";
-}
+// if($check)
+// {
+// 	echo "Hash validated\n";
+// }
