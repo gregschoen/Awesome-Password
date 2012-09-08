@@ -26,3 +26,14 @@ if($check)
 	echo "Hash validated\n";
 }
 ```
+
+## Why is this more secure?
+
+![Watch out, we got a badass over here.](http://i.imgur.com/sTDqO.png)
+
+On the first run of AwesomePassword, we randomly generate two 32 character "Pepper" Strings and determine a random number of rounds for the hash algorithm.
+
+Pepper strings are used to add complexity to entered passwords, they are wrapped around every password hashed and are only ever stored within the `config.json` file. This makes brute forcing stolen hashes difficult because we're adding an additional 64 characters of randomness to every password, and without perfect knowledge of the strings used, it would be prohibitively slow to attempt to figure them out.
+
+To further make things harder for an attacker, we generate a random "Rounds" value between 120000 and 140000. SHA512 allows you to hash a password over and over again to make hashing algorithms expensive. Instead of a hash operating taking a few milliseconds, we can make it take 200 milliseconds or more. Since we only need to hash a password once, we don't really mind a hashing operation taking a little while. An attacker on the other hand needs speed, because they need to try thousands or even millions of possible values before they find the right one.
+
