@@ -29,7 +29,7 @@ if($check)
 
 ## Why is this more secure?
 
-![Watch out, we got a badass over here.](http://i.imgur.com/sTDqO.png)
+![Watch out, we got a badass over here.](http://i.imgur.com/IaZrb.jpg)
 
 On the first run of AwesomePassword, we randomly generate two 32 character "Pepper" Strings and determine a random number of rounds for the hash algorithm.
 
