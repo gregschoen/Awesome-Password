@@ -11,7 +11,7 @@ Perhaps you're using unsalted MD5 or SHA1, but it's practically the same dependi
 - MD5(awesome): [be121740bf988b2225a313fa1f107ca1](http://www.md5-lookup.com/index.php?q=be121740bf988b2225a313fa1f107ca1)
 - MD5(password): [5f4dcc3b5aa765d61d8327deb882cf99](http://www.md5-lookup.com/index.php?q=5f4dcc3b5aa765d61d8327deb882cf99)
 
-Still think that your "hashed" passwords are safe? Enter AwesomePassword.
+Still think that your "hashed" passwords are safe?
 
 ## Why is AwesomePassword so awesome?
 
